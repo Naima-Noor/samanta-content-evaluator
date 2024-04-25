@@ -1,0 +1,66 @@
+ {
+  "workspace_id": "653637a4950d738c6249aa9a",
+  "username": "CustomerSupport",
+  "scale_name": "SamantaContentEvaluator",
+  "scale_category": "nps",
+  "total_no_of_buttons": 11,
+  "no_of_instances": 10000,
+  "scale_id": "660f9e84f2c00f026d8541a2",
+  "urls": [
+    {
+      "item": [
+        "https://100035.pythonanywhere.com/addons/create-response/?workspace_id=653637a4950d738c6249aa9a&username=CustomerSupport&scale_id=660f9e84f2c00f026d8541a2&value=0"
+      ]
+    },
+    {
+      "item": [
+        "https://100035.pythonanywhere.com/addons/create-response/?workspace_id=653637a4950d738c6249aa9a&username=CustomerSupport&scale_id=660f9e84f2c00f026d8541a2&value=1"
+      ]
+    },
+    {
+      "item": [
+        "https://100035.pythonanywhere.com/addons/create-response/?workspace_id=653637a4950d738c6249aa9a&username=CustomerSupport&scale_id=660f9e84f2c00f026d8541a2&value=2"
+      ]
+    },
+    {
+      "item": [
+        "https://100035.pythonanywhere.com/addons/create-response/?workspace_id=653637a4950d738c6249aa9a&username=CustomerSupport&scale_id=660f9e84f2c00f026d8541a2&value=3"
+      ]
+    },
+    {
+      "item": [
+        "https://100035.pythonanywhere.com/addons/create-response/?workspace_id=653637a4950d738c6249aa9a&username=CustomerSupport&scale_id=660f9e84f2c00f026d8541a2&value=4"
+      ]
+    },
+    {
+      "item": [
+        "https://100035.pythonanywhere.com/addons/create-response/?workspace_id=653637a4950d738c6249aa9a&username=CustomerSupport&scale_id=660f9e84f2c00f026d8541a2&value=5"
+      ]
+    },
+    {
+      "item:": [
+        "https://100035.pythonanywhere.com/addons/create-response/?workspace_id=653637a4950d738c6249aa9a&username=CustomerSupport&scale_id=660f9e84f2c00f026d8541a2&value=6"
+      ]
+    },
+    {
+      "item": [
+        "https://100035.pythonanywhere.com/addons/create-response/?workspace_id=653637a4950d738c6249aa9a&username=CustomerSupport&scale_id=660f9e84f2c00f026d8541a2&value=7"
+      ]
+    },
+    {
+      "item": [
+        "https://100035.pythonanywhere.com/addons/create-response/?workspace_id=653637a4950d738c6249aa9a&username=CustomerSupport&scale_id=660f9e84f2c00f026d8541a2&value=8"
+      ]
+    },
+    {
+      "item": [
+        "https://100035.pythonanywhere.com/addons/create-response/?workspace_id=653637a4950d738c6249aa9a&username=CustomerSupport&scale_id=660f9e84f2c00f026d8541a2&value=9"
+      ]
+    },
+    {
+      "item": [
+        "https://100035.pythonanywhere.com/addons/create-response/?workspace_id=653637a4950d738c6249aa9a&username=CustomerSupport&scale_id=660f9e84f2c00f026d8541a2&value=10"
+      ]
+    }
+  ]
+}
