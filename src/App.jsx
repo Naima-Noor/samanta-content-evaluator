@@ -1,30 +1,23 @@
 import { createContext, useState } from "react";
 import Header from "./components/Header";
 import Body from "./components/Body";
-import CouponModal from "./components/CouponModal";
 
 export const ModalContext = createContext();
 
 function App() {
-  
-  
-
   const [globalState, setGlobalState] = useState({
-   
+    
     globalEmail: "",
     couponError: "",
     couponSuccess: '',
-    
+      
   });
 
   return (
     <ModalContext.Provider value={{ globalState, setGlobalState }}>
       <div>
-       
-
-        <div className="app my-[20px] sm:my-[100px] max-w-[100%] sm:max-w-[60%] relative left-1 md:left-0 w-[100%] sm:m-auto bg-white rounded-[15px] sm:pt-20 sm:px-12 pb-5">
+        <div id="main" className="bg-white text-sm w-full md:w-8/12 lg:w-6/12 sm:text-md md:text-base mx-auto p-4 my-2 rounded-md border border-gray-400 md:border-none">
           <Header />
-          {/* naima */}
           <Body />
         </div>
       </div>
