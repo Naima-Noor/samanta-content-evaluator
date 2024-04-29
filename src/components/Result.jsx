@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { Oval } from "react-loader-spinner";
 
-function Result({ result, email }) {
+function Result({ result, email, title, content }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('')
   const [success, setSuccess] = useState("")
@@ -66,10 +66,12 @@ function Result({ result, email }) {
                       Result from Samanta Content Evaluator
                     </p>
                     
-                     <p style="font-size: 1.1em;">The Content is ${result["AI Check"]}</p>
+                    <p style="font-size: 1.1em;">The Content is ${result["AI Check"]}</p>
                     <p style="font-size: 1.1em;">Plagiarized: ${result.Plagiarised}</p>
                     <p style="font-size: 1.1em;">Creative: ${result.Creative}</p>
-
+                    <p style="font-size: 1.1em;">Title: ${title}</p>
+                    <p style="font-size: 1.1em;">Content: ${content}</p>
+                    
                   </section>
                 </main>
           
@@ -119,17 +121,17 @@ function Result({ result, email }) {
   };
 
   return (
-    <div className="w-11/12 my-5 p-4 mx-auto border border-gray-100 shadow-lg">
-      <h2 className="text-center my-2 font-bold text-xl">Result From Samanta</h2>
+    <div className="w-11/12 p-4 mx-auto border border-gray-300 shadow-lg">
+      <h2 className="text-center pb-2 my-2 font-bold text-xl border-b border-gray-200">Result From Samanta</h2>
 
-      <div className="result border border-gray-400 rounded-md">
-        <div className="border-b border-gray-400 flex gap-3 p-3 items-center">
+      <div className="result">
+        <div className="flex gap-3 p-3 items-center">
           <p>
             The Content is{' '}
             <span className="font-semibold">{result["AI Check"]}</span>
           </p>
         </div>
-        <div className="border-b border-gray-400 flex gap-3 p-3 items-center">
+        <div className="flex gap-3 p-3 items-center">
           <p>Plagiarized:</p>
           <p className="font-semibold">{result.Plagiarised}</p>
         </div>
@@ -139,7 +141,7 @@ function Result({ result, email }) {
         </div>
       </div>
 
-      <div className="flex gap-3 mt-8 justify-center items-center">
+      <div className="border-t border-gray-200 flex gap-3 mt-3 justify-center items-center pt-2">
         <p>Do you want to mail this?</p>
         <button
           className="px-2 py-1 text-white bg-green-500 hover:bg-green-400 rounded-md"

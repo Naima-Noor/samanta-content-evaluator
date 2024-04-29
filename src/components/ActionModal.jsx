@@ -22,6 +22,7 @@ function ActionModal({
   setNumOfTimes,
   setContent,
   setTitle,
+  setEmail,
   cancel,
   setCancel
 }) {
@@ -36,6 +37,13 @@ function ActionModal({
 
   useEffect(() => {
     setShowTimesUsed(true);
+
+    if (result) {
+      setCancel(false);
+      setShowContribute(false);
+      setCheck(false);
+    }
+
     if ((numofTimes < 4) | (numofTimes > 6)) {
       setCancel(true);
     }
@@ -54,6 +62,7 @@ function ActionModal({
       setCheck(true);
       setCancel(false);
     }
+    
   }, [numofTimes, globalState.couponSuccess]);
 
   const handleCancel = () => {
@@ -75,9 +84,16 @@ function ActionModal({
   };
 
   const handleTryAgain = () => {
-    setContent("");
-    setTitle("");
     setResult(null);
+    setTitle("");
+    setContent("");
+    setEmail("");
+    setGlobalState({
+      ...globalState,
+      globalEmail: "",
+      couponError: "",
+      couponSuccess: "",
+    });
     setShowActionModal(false);
   };
 
@@ -200,7 +216,7 @@ function ActionModal({
   return (
     <>
       <div className="flex justify-center items-center overflow-hidden fixed inset-0 z-50 outline-none focus:outline-none font-poppins">
-        <div className="relative w-11/12 my-6 mx-auto max-w-2xl">
+        <div className="relative w-11/12 my-6 mx-auto max-w-3xl">
           <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none max-h-screen overflow-y-auto">
             <div className="mb-5">
               <div className="logo">
@@ -275,10 +291,10 @@ function ActionModal({
                   </button>
                 </div>
               )}
-              {result && <Result result={result} email={email} />}
+              {result && <Result result={result} email={email} title={title} content={content}/>}
               {result && (
                 <div className="scale my-3 mt-5">
-                  <p className="text-gray-800 px-5 text-center">
+                  <p className="text-gray-800 px-5 text-center text-sm">
                     On a scale of 0-10, how likely are you to recommend the product
                     to a friend or colleague?
                   </p>
@@ -286,7 +302,7 @@ function ActionModal({
                     {scaleData.map((item, index) => (
                       <button
                         key={index}
-                        className="px-3 py-1 text-white bg-green-500 rounded-lg mt-2"
+                        className="px-2 text-white bg-green-500 rounded-lg mt-2"
                         onClick={() => handleScale(item.item[0])}
                       >
                         {index}

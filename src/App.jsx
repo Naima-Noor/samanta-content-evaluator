@@ -16,7 +16,7 @@ function App() {
   return (
     <ModalContext.Provider value={{ globalState, setGlobalState }}>
       <div>
-        <div id="main" className="bg-white text-sm w-full md:w-8/12 lg:w-6/12 sm:text-md md:text-base mx-auto p-4 my-2 rounded-md border border-gray-400 md:border-none">
+        <div id="main" className="bg-white text-sm w-full md:w-8/12 lg:w-7/12 sm:text-md md:text-base mx-auto p-4 my-2 rounded-md border border-gray-400 md:border-none">
           <Header />
           <Body />
         </div>
