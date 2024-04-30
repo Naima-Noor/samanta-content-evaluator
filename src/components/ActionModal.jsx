@@ -38,12 +38,6 @@ function ActionModal({
   useEffect(() => {
     setShowTimesUsed(true);
 
-    if (result) {
-      setCancel(false);
-      setShowContribute(false);
-      setCheck(false);
-    }
-
     if ((numofTimes < 4) | (numofTimes > 6)) {
       setCancel(true);
     }
@@ -138,6 +132,9 @@ function ActionModal({
         
         setShowTimesUsed(true);
         setResult(response.data);
+        setCancel(false);
+        setShowContribute(false);
+        setCheck(false);
         setLoading(false);
       } else {
         setLoading(false);
