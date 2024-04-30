@@ -27,7 +27,7 @@ function Form() {
 
     // set default title if not entered by user
     if (!title) {
-      setTitle('Title');
+      setTitle('Topic Name');
     }
 
     // check if content is not empty
@@ -173,9 +173,9 @@ function Form() {
   };
 
   return (
-    <div className="mt-5 lg:mt-3">
+    <div className="mt-5 lg:mt-1">
       
-      <form className="flex flex-col gap-4">
+      <form className="flex flex-col gap-4 text-[15px]">
         <input
           type="text"
           placeholder="Topic Name"
@@ -251,6 +251,7 @@ function Form() {
           setShowActionModal={setShowActionModal}
           setContent={setContent}
           setTitle={setTitle}
+          setEmail={setEmail}
           content={content}
           title={title}
           email={email}
