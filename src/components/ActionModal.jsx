@@ -60,9 +60,6 @@ function ActionModal({
   }, [numofTimes, globalState.couponSuccess]);
 
   const handleCancel = () => {
-    // setGlobalState({...globalState,couponError:''})
-    // setShowActionModal(false);
-
     setResult(null);
     setGlobalState({
       ...globalState,
