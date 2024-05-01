@@ -49,7 +49,7 @@ function Result({ result, email, title, content }) {
                   "
                 >
                   <img
-                    src="https://www.uxlivinglab.org/wp-content/uploads/2023/08/logo-e1531386713115.webp"
+                    src="https://dowellfileuploader.uxlivinglab.online/hr/logo-2-min-min.png"
                     height="140px"
                     width="140px"
                     style="display: block; margin: 0 auto;"
